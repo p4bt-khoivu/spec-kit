@@ -192,7 +192,27 @@ Given that feature description, do this:
 
    d. **Update Checklist**: After each validation iteration, update the checklist file with current pass/fail status
 
-7. Report completion with branch name, spec file path, checklist results, and readiness for the next phase (`/speckit.clarify` or `/speckit.plan`).
+7. **Create Workflow Diagram**: After writing the initial spec and validate it against quality criteria:
+
+   a. **Create Activity Diagram**: Generate an activity diagram using Mermaid and put the file at `FEATURE_DIR/checklists/activity-diagram.md`. The diagram must illustrate the main user flows, exceptional flow, alternative flows and decision points described in the spec. Diagram requirements:
+
+      - Title: "[FEATURE NAME] Activity Diagram"
+      -  Use Mermaid syntax for activity diagrams
+      - Include start and end points
+      - Show main user actions and system responses
+      - Include decision points with branches for different outcomes
+      - Highlight exceptional flows (errors, edge cases)
+      - Ensure clarity and readability
+   b. **Create Sequence Diagram**: Generate a sequence diagram using Mermaid and put the file at `FEATURE_DIR/checklists/sequence-diagram.md`. The diagram must illustrate interactions between key entities/components during main user flows described in the spec. Diagram requirements:
+
+      - Title: "[FEATURE NAME] Sequence Diagram"
+      - Use Mermaid syntax for sequence diagrams
+      - Include all relevant actors and system components
+      - Show message exchanges with labels for actions and responses
+      - Highlight important interactions and data flows
+      - Ensure clarity and readability
+
+8. Report completion with branch name, spec file path, checklist results, and readiness for the next phase (`/speckit.clarify` or `/speckit.plan`).
 
 **NOTE:** The script creates and checks out the new branch and initializes the spec file before writing.
 
