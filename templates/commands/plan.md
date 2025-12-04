@@ -1,5 +1,13 @@
 ---
 description: Execute the implementation planning workflow using the plan template to generate design artifacts.
+handoffs: 
+  - label: Create Tasks
+    agent: speckit.tasks
+    prompt: Break the plan into tasks
+    send: true
+  - label: Create Checklist
+    agent: speckit.checklist
+    prompt: Create a checklist for the following domain...
 scripts:
   sh: scripts/bash/setup-plan.sh --json
   ps: scripts/powershell/setup-plan.ps1 -Json
@@ -43,7 +51,8 @@ You **MUST** consider the user input before proceeding (if not empty).
    - For each integration → patterns task
 
 2. **Generate and dispatch research agents**:
-   ```
+
+   ```text
    For each unknown in Technical Context:
      Task: "Research {unknown} for {feature context}"
    For each technology choice:

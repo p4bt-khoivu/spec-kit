@@ -1,11 +1,11 @@
 <div align="center">
-    <img src="./media/logo_small.webp"/>
+    <img src="./media/logo_large.webp" alt="Spec Kit Logo" width="200" height="200"/>
     <h1>🌱 Spec Kit</h1>
     <h3><em>Build high-quality software faster.</em></h3>
 </div>
 
 <p align="center">
-    <strong>An effort to allow organizations to focus on product scenarios rather than writing undifferentiated code with the help of Spec-Driven Development.</strong>
+    <strong>An open source toolkit that allows you to focus on product scenarios and predictable outcomes instead of vibe coding every piece from scratch.</strong>
 </p>
 
 <p align="center">
@@ -20,16 +20,16 @@
 ## Table of Contents
 
 - [🤔 What is Spec-Driven Development?](#-what-is-spec-driven-development)
-- [⚡ Get started](#-get-started)
+- [⚡ Get Started](#-get-started)
 - [📽️ Video Overview](#️-video-overview)
 - [🤖 Supported AI Agents](#-supported-ai-agents)
 - [🔧 Specify CLI Reference](#-specify-cli-reference)
-- [📚 Core philosophy](#-core-philosophy)
-- [🌟 Development phases](#-development-phases)
-- [🎯 Experimental goals](#-experimental-goals)
+- [📚 Core Philosophy](#-core-philosophy)
+- [🌟 Development Phases](#-development-phases)
+- [🎯 Experimental Goals](#-experimental-goals)
 - [🔧 Prerequisites](#-prerequisites)
-- [📖 Learn more](#-learn-more)
-- [📋 Detailed process](#-detailed-process)
+- [📖 Learn More](#-learn-more)
+- [📋 Detailed Process](#-detailed-process)
 - [🔍 Troubleshooting](#-troubleshooting)
 - [👥 Maintainers](#-maintainers)
 - [💬 Support](#-support)
@@ -40,9 +40,9 @@
 
 Spec-Driven Development **flips the script** on traditional software development. For decades, code has been king — specifications were just scaffolding we built and discarded once the "real work" of coding began. Spec-Driven Development changes this: **specifications become executable**, directly generating working implementations rather than just guiding them.
 
-## ⚡ Get started
+## ⚡ Get Started
 
-### 1. Install Specify
+### 1. Install Specify CLI
 
 Choose your preferred installation method:
 
@@ -61,7 +61,7 @@ specify init <PROJECT_NAME>
 specify check
 ```
 
-To upgrade specify run:
+To upgrade Specify, see the [Upgrade Guide](./docs/upgrade.md) for detailed instructions. Quick upgrade:
 
 ```bash
 uv tool install specify-cli --force --from git+https://github.com/github/spec-kit.git
@@ -83,6 +83,8 @@ uvx --from git+https://github.com/github/spec-kit.git specify init <PROJECT_NAME
 - Cleaner shell configuration
 
 ### 2. Establish project principles
+
+Launch your AI assistant in the project directory. The `/speckit.*` commands are available in the assistant.
 
 Use the **`/speckit.constitution`** command to create your project's governing principles and development guidelines that will guide all subsequent development.
 
@@ -134,19 +136,24 @@ Want to see Spec Kit in action? Watch our [video overview](https://www.youtube.c
 
 | Agent                                                     | Support | Notes                                             |
 |-----------------------------------------------------------|---------|---------------------------------------------------|
-| [Claude Code](https://www.anthropic.com/claude-code)      | ✅ |                                                   |
-| [GitHub Copilot](https://code.visualstudio.com/)          | ✅ |                                                   |
-| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | ✅ |                                                   |
-| [Cursor](https://cursor.sh/)                              | ✅ |                                                   |
-| [Qwen Code](https://github.com/QwenLM/qwen-code)          | ✅ |                                                   |
-| [opencode](https://opencode.ai/)                          | ✅ |                                                   |
-| [Windsurf](https://windsurf.com/)                         | ✅ |                                                   |
-| [Kilo Code](https://github.com/Kilo-Org/kilocode)         | ✅ |                                                   |
-| [Auggie CLI](https://docs.augmentcode.com/cli/overview)   | ✅ |                                                   |
-| [CodeBuddy](https://www.codebuddy.ai/)                    | ✅ |                                                   |
-| [Roo Code](https://roocode.com/)                          | ✅ |                                                   |
-| [Codex CLI](https://github.com/openai/codex)              | ✅ |                                                   |
+| [Qoder CLI](https://qoder.com/cli)                        | ✅ |    |  
 | [Amazon Q Developer CLI](https://aws.amazon.com/developer/learning/q-developer-cli/) | ⚠️ | Amazon Q Developer CLI [does not support](https://github.com/aws/amazon-q-developer-cli/issues/3064) custom arguments for slash commands. |
+| [Amp](https://ampcode.com/)                               | ✅ | |
+| [Auggie CLI](https://docs.augmentcode.com/cli/overview)   | ✅ |                                                   |                 
+| [Claude Code](https://www.anthropic.com/claude-code)      | ✅ |                                                   |
+| [CodeBuddy CLI](https://www.codebuddy.ai/cli)             | ✅ |                                                   |
+| [Codex CLI](https://github.com/openai/codex)              | ✅ |                                                   |
+| [Cursor](https://cursor.sh/)                              | ✅ |                                                   |
+| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | ✅ |                                                   |
+| [GitHub Copilot](https://code.visualstudio.com/)          | ✅ |                                                   |
+| [IBM Bob](https://www.ibm.com/products/bob)               | ✅ | IDE-based agent with slash command support |
+| [Jules](https://jules.google.com/)                        | ✅ | |
+| [Kilo Code](https://github.com/Kilo-Org/kilocode)         | ✅ |                                                   |
+| [opencode](https://opencode.ai/)                          | ✅ |                                                   |
+| [Qwen Code](https://github.com/QwenLM/qwen-code)          | ✅ |                                                   |
+| [Roo Code](https://roocode.com/)                          | ✅ |                                                   |
+| [SHAI (OVHcloud)](https://github.com/ovh/shai)            | ✅ | |
+| [Windsurf](https://windsurf.com/)                         | ✅ |                                                   |
 
 ## 🔧 Specify CLI Reference
 
@@ -157,14 +164,14 @@ The `specify` command supports the following options:
 | Command     | Description                                                    |
 |-------------|----------------------------------------------------------------|
 | `init`      | Initialize a new Specify project from the latest template      |
-| `check`     | Check for installed tools (`git`, `claude`, `gemini`, `code`/`code-insiders`, `cursor-agent`, `windsurf`, `qwen`, `opencode`, `codex`) |
+| `check`     | Check for installed tools (`git`, `claude`, `gemini`, `code`/`code-insiders`, `cursor-agent`, `windsurf`, `qwen`, `opencode`, `codex`, `shai`, `qoder`) |
 
 ### `specify init` Arguments & Options
 
 | Argument/Option        | Type     | Description                                                                  |
 |------------------------|----------|------------------------------------------------------------------------------|
 | `<project-name>`       | Argument | Name for your new project directory (optional if using `--here`, or use `.` for current directory) |
-| `--ai`                 | Option   | AI assistant to use: `claude`, `gemini`, `copilot`, `cursor-agent`, `qwen`, `opencode`, `codex`, `windsurf`, `kilocode`, `auggie`, `roo`, `codebuddy`, or `q` |
+| `--ai`                 | Option   | AI assistant to use: `claude`, `gemini`, `copilot`, `cursor-agent`, `qwen`, `opencode`, `codex`, `windsurf`, `kilocode`, `auggie`, `roo`, `codebuddy`, `amp`, `shai`, `q`, `bob`, or `qoder` |
 | `--script`             | Option   | Script variant to use: `sh` (bash/zsh) or `ps` (PowerShell)                 |
 | `--ignore-agent-tools` | Flag     | Skip checks for AI agent tools like Claude Code                             |
 | `--no-git`             | Flag     | Skip git repository initialization                                          |
@@ -186,8 +193,20 @@ specify init my-project --ai claude
 # Initialize with Cursor support
 specify init my-project --ai cursor-agent
 
+# Initialize with Qoder support
+specify init my-project --ai qoder
+
 # Initialize with Windsurf support
 specify init my-project --ai windsurf
+
+# Initialize with Amp support
+specify init my-project --ai amp
+
+# Initialize with SHAI support
+specify init my-project --ai shai
+
+# Initialize with IBM Bob support
+specify init my-project --ai bob
 
 # Initialize with PowerShell scripts (Windows/cross-platform)
 specify init my-project --ai copilot --script ps
@@ -199,7 +218,7 @@ specify init --here --ai copilot
 
 # Force merge into current (non-empty) directory without confirmation
 specify init . --force --ai copilot
-# or 
+# or
 specify init --here --force --ai copilot
 
 # Skip git initialization
@@ -247,16 +266,16 @@ Additional commands for enhanced quality and validation:
 |------------------|------------------------------------------------------------------------------------------------|
 | `SPECIFY_FEATURE` | Override feature detection for non-Git repositories. Set to the feature directory name (e.g., `001-photo-albums`) to work on a specific feature when not using Git branches.<br/>**Must be set in the context of the agent you're working with prior to using `/speckit.plan` or follow-up commands. |
 
-## 📚 Core philosophy
+## 📚 Core Philosophy
 
 Spec-Driven Development is a structured process that emphasizes:
 
-- **Intent-driven development** where specifications define the "_what_" before the "_how_"
+- **Intent-driven development** where specifications define the "*what*" before the "*how*"
 - **Rich specification creation** using guardrails and organizational principles
 - **Multi-step refinement** rather than one-shot code generation from prompts
 - **Heavy reliance** on advanced AI model capabilities for specification interpretation
 
-## 🌟 Development phases
+## 🌟 Development Phases
 
 | Phase | Focus | Key Activities |
 |-------|-------|----------------|
@@ -264,7 +283,7 @@ Spec-Driven Development is a structured process that emphasizes:
 | **Creative Exploration** | Parallel implementations | <ul><li>Explore diverse solutions</li><li>Support multiple technology stacks & architectures</li><li>Experiment with UX patterns</li></ul> |
 | **Iterative Enhancement** ("Brownfield") | Brownfield modernization | <ul><li>Add features iteratively</li><li>Modernize legacy systems</li><li>Adapt processes</li></ul> |
 
-## 🎯 Experimental goals
+## 🎯 Experimental Goals
 
 Our research and experimentation focus on:
 
@@ -300,14 +319,14 @@ Our research and experimentation focus on:
 
 If you encounter issues with an agent, please open an issue so we can refine the integration.
 
-## 📖 Learn more
+## 📖 Learn More
 
 - **[Complete Spec-Driven Development Methodology](./spec-driven.md)** - Deep dive into the full process
 - **[Detailed Walkthrough](#-detailed-process)** - Step-by-step implementation guide
 
 ---
 
-## 📋 Detailed process
+## 📋 Detailed Process
 
 <details>
 <summary>Click to expand the detailed step-by-step walkthrough</summary>
@@ -354,7 +373,7 @@ specify init . --force --ai claude
 specify init --here --force --ai claude
 ```
 
-The CLI will check if you have Claude Code, Gemini CLI, Cursor CLI, Qwen CLI, opencode, Codex CLI, or Amazon Q Developer CLI installed. If you do not, or you prefer to get the templates without checking for the right tools, use `--ignore-agent-tools` with your command:
+The CLI will check if you have Claude Code, Gemini CLI, Cursor CLI, Qwen CLI, opencode, Codex CLI, Qoder CLI, or Amazon Q Developer CLI installed. If you do not, or you prefer to get the templates without checking for the right tools, use `--ignore-agent-tools` with your command:
 
 ```bash
 specify init <project_name> --ai claude --ignore-agent-tools
@@ -381,7 +400,7 @@ This step creates or updates the `.specify/memory/constitution.md` file with you
 With your project principles established, you can now create the functional specifications. Use the `/speckit.specify` command and then provide the concrete requirements for the project you want to develop.
 
 >[!IMPORTANT]
->Be as explicit as possible about _what_ you are trying to build and _why_. **Do not focus on the tech stack at this point**.
+>Be as explicit as possible about *what* you are trying to build and *why*. **Do not focus on the tech stack at this point**.
 
 An example prompt:
 
@@ -415,16 +434,16 @@ At this stage, your project folder contents should resemble the following:
 ```text
 └── .specify
     ├── memory
-    │	 └── constitution.md
+    │  └── constitution.md
     ├── scripts
-    │	 ├── check-prerequisites.sh
-    │	 ├── common.sh
-    │	 ├── create-new-feature.sh
-    │	 ├── setup-plan.sh
-    │	 └── update-claude-md.sh
+    │  ├── check-prerequisites.sh
+    │  ├── common.sh
+    │  ├── create-new-feature.sh
+    │  ├── setup-plan.sh
+    │  └── update-claude-md.sh
     ├── specs
-    │	 └── 001-create-taskify
-    │	     └── spec.md
+    │  └── 001-create-taskify
+    │      └── spec.md
     └── templates
         ├── plan-template.md
         ├── spec-template.md
@@ -438,6 +457,7 @@ With the baseline specification created, you can go ahead and clarify any of the
 You should run the structured clarification workflow **before** creating a technical plan to reduce rework downstream.
 
 Preferred order:
+
 1. Use `/speckit.clarify` (structured) – sequential, coverage-based questioning that records answers in a Clarifications section.
 2. Optionally follow up with ad-hoc free-form refinement if something still feels vague.
 
@@ -475,23 +495,23 @@ The output of this step will include a number of implementation detail documents
 .
 ├── CLAUDE.md
 ├── memory
-│	 └── constitution.md
+│  └── constitution.md
 ├── scripts
-│	 ├── check-prerequisites.sh
-│	 ├── common.sh
-│	 ├── create-new-feature.sh
-│	 ├── setup-plan.sh
-│	 └── update-claude-md.sh
+│  ├── check-prerequisites.sh
+│  ├── common.sh
+│  ├── create-new-feature.sh
+│  ├── setup-plan.sh
+│  └── update-claude-md.sh
 ├── specs
-│	 └── 001-create-taskify
-│	     ├── contracts
-│	     │	 ├── api-spec.json
-│	     │	 └── signalr-spec.md
-│	     ├── data-model.md
-│	     ├── plan.md
-│	     ├── quickstart.md
-│	     ├── research.md
-│	     └── spec.md
+│  └── 001-create-taskify
+│      ├── contracts
+│      │  ├── api-spec.json
+│      │  └── signalr-spec.md
+│      ├── data-model.md
+│      ├── plan.md
+│      ├── quickstart.md
+│      ├── research.md
+│      └── spec.md
 └── templates
     ├── CLAUDE-template.md
     ├── plan-template.md
@@ -573,6 +593,7 @@ Once ready, use the `/speckit.implement` command to execute your implementation 
 ```
 
 The `/speckit.implement` command will:
+
 - Validate that all prerequisites are in place (constitution, spec, plan, and tasks)
 - Parse the task breakdown from `tasks.md`
 - Execute tasks in the correct order, respecting dependencies and parallel execution markers
